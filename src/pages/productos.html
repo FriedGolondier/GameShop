@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - GAME ON SHOP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/src/css/productosStyle.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="/index.html">Inicio</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="form-section">
+            <h2>Alta de Productos</h2>
+            <form id="formAgregarProducto" novalidate>
+                <div class="form-group">
+                    <label for="txtIDArticulo">ID Artículo</label>
+                    <input type="number" id="txtIDArticulo" name="txtIDArticulo" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="txtNombre">Nombre</label>
+                    <input type="text" id="txtNombre" name="txtNombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="rngCantidad">Cantidad</label>
+                    <div class="range-container">
+                        <input type="range" id="rngCantidad" name="rngCantidad" min="1" max="100" value="50">
+                        <output>50</output>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtPrecio">Precio ($)</label>
+                    <input type="number" id="txtPrecio" name="txtPrecio" step="0.01" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="txtDescripcion">Descripción</label>
+                    <textarea id="txtDescripcion" name="txtDescripcion" rows="2" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cboCategoria">Categoría</label>
+                    <select id="cboCategoria" name="cboCategoria" required>
+                        <option selected disabled value="">Seleccione...</option>
+                        <option value="juegos">Juegos</option>
+                        <option value="consolas">Consolas</option>
+                        <option value="accesorios">Accesorios</option>
+                        <option value="coleccionables">Coleccionables</option>
+                    </select>
+                </div>
+                <div class="form-group full-width sale-type">
+                    <label>Tipo de Venta</label>
+                    <div class="options-container">
+                        <label class="option">
+                            <input type="radio" name="rdbTipoVenta" value="menudeo" checked>
+                            <span>Menudeo</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="rdbTipoVenta" value="mayoreo">
+                            <span>Mayoreo</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label>Opciones Especiales</label>
+                    <div>
+                        <label><input type="checkbox" name="chkOpciones" value="Edición especial"> Edición
+                            especial</label><br>
+                        <label><input type="checkbox" name="chkOpciones" value="Incluye DLC"> Incluye DLC</label><br>
+                        <label><input type="checkbox" name="chkOpciones" value="Producto exclusivo"> Producto
+                            exclusivo</label><br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Emision">Fecha de emision</label>
+                    <input type="date" id="Emision" name="Emision" required>
+                </div>
+
+                <div class="form-group full-width submit-container">
+                    <button type="submit">Añadir</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Lista de Productos</h2>
+            <div id="divListaProductos" class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Descripción</th>
+                            <th>Categoría</th>
+                            <th>Tipo Venta</th>
+                            <th>Acciones</th>
+                            <th>Fecha de Emisión</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyProductos">
+                        <!-- Productos se agregarán aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

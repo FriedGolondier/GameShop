@@ -1,0 +1,228 @@
+/* ============================= */
+/* RESET GENERAL                 */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/* ESTILOS GENERALES             */
+/* ============================= */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* ============================= */
+/* NAVBAR                        */
+/* ============================= */
+.navbar {
+    background: linear-gradient(to right, #000000, #111) !important;
+    padding: 10px 0 !important;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline !important;
+}
+
+.navbar-collapse {
+    justify-content: end !important;
+}
+
+.navbar-collapse .nav-link {
+    padding: 0 15px !important;
+}
+
+.navbar-collapse .nav-link:last-child {
+    margin-left: 10px !important;
+}
+
+/* ============================= */
+/* PÁGINA QUIÉNES SOMOS          */
+/* ============================= */
+.about-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #672fac;
+    ;
+}
+
+/* Contenedor principal */
+.about-container {
+    flex: 1;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabecera */
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-header h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-header p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Grid de tarjetas VERTICAL */
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tarjetas */
+.about-card {
+    background-color: #698ef5;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: clamp(2.5rem, 8vw, 3rem);
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.about-card h3 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.about-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: white;
+}
+
+.about-card p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    line-height: 1.6;
+}
+
+.about-card ul {
+    text-align: left;
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.about-card li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.about-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.about-card span {
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+/* ============================= */
+/* FOOTER                        */
+/* ============================= */
+.epic-footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-text {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.volver-arriba {
+    margin-top: 1.5rem;
+}
+
+.volver-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* MEDIA                         */
+/* ============================= */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .about-card {
+        padding: 1.2rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-header p {
+        font-size: 1rem;
+    }
+}

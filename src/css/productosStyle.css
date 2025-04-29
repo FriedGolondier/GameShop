@@ -1,0 +1,235 @@
+/* ==================== */
+/* ESTILOS GENERALES */
+/* ==================== */
+body {
+    background: #672fac;
+    ;
+    color: #f8f5ff;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==================== */
+/* NAVBAR */
+/* ==================== */
+nav {
+    background: #000000;
+    padding: 1rem 0;
+    border-bottom: 2px solid #7617b5;
+}
+
+nav .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav a {
+    color: #e2d6ff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff;
+    background: rgba(245, 245, 255, 0.1);
+}
+
+/* ==================== */
+/* CONTENEDOR PRINCIPAL */
+/* ==================== */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==================== */
+/* FORMULARIO */
+/* ==================== */
+section:first-of-type {
+    background: #2a1055;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    border: 1px solid #4a1d96;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    color: #f8f5ff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #7b17b5;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+form>div {
+    margin-bottom: 1rem;
+}
+
+label {
+    color: #d8c8ff;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input,
+select,
+textarea {
+    background: #2a1055;
+    border: 1px solid #5a2ca0;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    padding: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #b5179e;
+    box-shadow: 0 0 0 0.2rem rgba(181, 23, 158, 0.25);
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background: #b5179e;
+    width: 18px;
+    height: 18px;
+}
+
+output {
+    display: inline-block;
+    margin-left: 10px;
+    color: #d8a1ff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+/* Botón de submit */
+button[type="submit"] {
+    background: #1776b5;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #12209c;
+    transform: translateY(-2px);
+}
+
+/* ==================== */
+/* LISTA DE PRODUCTOS */
+/* ==================== */
+section:last-of-type {
+    background: #2a1055;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #4a1d96;
+}
+
+section:last-of-type h2 {
+    border-bottom-color: #b5179e;
+}
+
+/* Tabla */
+.horizontal-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+th {
+    background: #3a0ca3;
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #3a1d6e;
+    color: #e2d6ff;
+    background: #2a1055;
+}
+
+tr:nth-child(even) td {
+    background: #2e125e;
+}
+
+tr:hover td {
+    background: #3a1d6e;
+    color: #fff;
+}
+
+/* Botones de acción */
+.action-btn {
+    background: none;
+    border: none;
+    color: #d8a1ff;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    padding: 0.3rem;
+}
+
+.action-btn:hover {
+    color: #fff;
+    background: rgba(181, 23, 158, 0.2);
+    border-radius: 4px;
+}

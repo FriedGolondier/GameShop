@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="src/js/login.js" defer></script> <!-- Aquí incluimos login.js para manejar todo -->
+    <script src="src/js/menu.js" defer></script>
+</head>
+
+<body>
+    <header class="container-fluid p-0">
+        <img src="src/assets/image/Banner_pagina_web_gameOn.1.png" alt="Banner" class="img-fluid w-100">
+
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <div class="container">
+                <!-- Menú de inicio -->
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle text-white fw-bold" href="#" id="inicioDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Inicio
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="inicioDropdown">
+                        <li><a class="dropdown-item" href="/src/pages/quienesSomos.html">Quiénes Somos</a></li>
+                        <li><a class="dropdown-item" href="/src/pages/servicios.html">Servicios</a></li>
+                        <li><a class="dropdown-item" href="/src/pages/contacto.html">Contáctanos</a></li>
+                        <!-- El item de Productos se insertará dinámicamente desde login.js si es admin -->
+                    </ul>
+                </div>
+
+                <!-- Botón de menú en teléfonos -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                    aria-controls="menuNav" aria-expanded="false" aria-label="Menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Opciones de login y registro -->
+                <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+                    <div class="d-flex">
+                        <a id="btnLogin" href="/login.html" class="nav-link text-white">Login</a>
+                        <a id="btnRegistro" href="/src/pages/registro.html"
+                            class="nav-link text-white ms-3">Registrarse</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de videos con carrusel -->
+    <div class="container my-4">
+        <div class="video-carousel d-flex align-items-center justify-content-center position-relative">
+            <button class="prev-btn position-absolute start-0 translate-middle-y">❮</button>
+            <video id="main-video" class="promo-video" autoplay muted loop>
+                <source src="src/assets/video/leyendzeldaV1.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <button class="next-btn position-absolute end-0 translate-middle-y">❯</button>
+        </div>
+    </div>
+    <div>
+        <div id="listaProductos" class="container mt-4"></div>
+        <script src="/src/js/listarProductos.js" defer></script>
+    </div>
+
+    <footer class="epic-footer">
+        <div class="footer-text container">
+            <p>
+                © 2025, GAME ON SHOP. Todos los derechos reservados.
+                GAME ON SHOP, el logotipo de GAME ON SHOP, Nintendo 64 y los nombres de los videojuegos mencionados en
+                este sitio son marcas comerciales o marcas registradas de sus respectivos propietarios. Nintendo 64 es
+                una marca registrada de Nintendo Co., Ltd.
+                Nuestro sitio web puede incluir enlaces a otros sitios y recursos ofrecidos por terceros. Estos enlaces
+                se proporcionan únicamente para tu conveniencia. GAME ON SHOP no tiene control sobre el contenido de
+                estos sitios externos y no asume responsabilidad alguna por ellos, ni por cualquier pérdida o daño que
+                pueda derivarse de su uso.
+            </p>
+            <div class="footer-links">
+                <a href="#">Términos de servicio</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Seguridad y protección</a>
+                <a href="#">Política de reembolso de la tienda</a>
+            </div>
+            <div class="volver-arriba">
+                <a href="#" class="volver-btn">Volver al principio ⤴</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
